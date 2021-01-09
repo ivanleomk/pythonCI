@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       # Looks for action in <PROJECT_ROOT_DIRECTORY>/action-a
-      - uses: ./action-a
+      - uses: ./Docker
         # Set a secret from GitHub
         env:
           MY_NAME: ${{secrets.MY_NAME}}
