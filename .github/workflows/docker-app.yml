@@ -1,0 +1,17 @@
+name: Docker Workflow for Containers
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches: [main]
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Looks for action in <PROJECT_ROOT_DIRECTORY>/action-a
+      - uses: ./action-a
+        # Set a secret from GitHub
+        env:
+          MY_NAME: ${{secrets.MY_NAME}}
