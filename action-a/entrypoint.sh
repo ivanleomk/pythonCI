@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-sh -c "echo Hello world my name is $MY_NAME"
+sh -c "My name is $MY_NAME and I am trying to learn how to use Docker with Github Actions"
